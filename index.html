@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            body{
+                height: 100vh;
+                background-color: darkorchid;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .container{
+                position: relative;
+                max-width: 430px;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+            .container .form{
+                padding: 30px;
+                text-align: center;
+            }
+            .container .form .title{
+                position:relative;
+                font-size: 30px;
+                font-weight: 600;
+            }
+            .form .title::after{
+                content: '!';
+                color: darkorchid;
+            }
+            .form .input-field{
+                position: relative;
+                height: 50px;
+                width: 100%;
+                margin-top: 30px;
+            }
+            .input-field input{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                padding: 0 35px;
+                border: none;
+                outline: none;
+                font-size: 16px;
+                border-bottom: 2px solid #ccc;
+                border-top: 2px solid transparent;
+                transition:all 0.2s ease;
+                left: 0;
+            }
+            .input-field input:is(:focus,:valid){
+                border-bottom-color: darkorchid;
+            }
+            .input-field input::placeholder{
+                position: absolute;
+                left: 0px;
+            }
+            p{
+                font-size: 16px;
+                color:grey;
+            }
+            .form .checkbox-text{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 30px;
+            }
+            .checkbox-text .checkbox-content{
+                display: flex;
+                align-items: center;
+            }
+            .checkbox-text input{
+                margin: 0 8px -2px 4px;
+                accent-color: blue;
+            }
+            .form .text{
+                color: blue;
+                font-size: 14px;
+            }
+            .form a.text{
+                color: blue;
+                text-decoration: none;
+            }
+            .form a:hover{
+                text-decoration: underline;
+            }
+            .form .button{
+                margin-top: 25px;
+            }
+            .form .button input{
+                border: none;
+                background-color: darkorchid;
+                color:white;
+                font-size: 20px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            .button input:hover{
+                background-color: darkorchid;
+            }
+            .form .reg-login{
+                margin-top: 25px;
+                text-align: center;
+            }
+            .reg-login .login-text{
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+       <div class="container">
+           <div class="form">
+                <div class="Registration form">
+                    <span class="title">Registration Form</span>
+                    <p>Sign up now to become a member</p>
+                    <form action="#">
+                        <div class="input-field">
+                            <input type="text" placeholder="Enter Name" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="email" placeholder="Enter Email" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" placeholder="Choose A Password" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" placeholder="Re-Enter Password" required>
+                        </div>
+                        <div class="input-field button">
+                            <input type="button" value="Signup">
+                        </div>
+                    </form>
+                    <div class="reg-login">
+                        <span class="text1">Already a member?</span>
+                        <a href="LoginForm1.html" class="text1 login-text">Login Here</a>
+                    </div>
+                </div>
+           </div>
+       </div>
+    </body>
+</html>
